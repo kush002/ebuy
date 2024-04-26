@@ -6,6 +6,8 @@ const app = express();
 
 dotenv.config({ path: "backend/config/config.env" });
 
+app.use(express.json());
+
 connectDatabase();
 
 app.use("/api", productRoute);
